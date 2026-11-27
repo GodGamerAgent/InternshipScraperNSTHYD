@@ -1,0 +1,16 @@
+{
+  "vikram-iyer-example": {
+    "login": "vikram-iyer-example",
+    "name": "Vikram Iyer",
+    "email": "vikram@examplestack.example",
+    "company": "@examplestack-oss",
+    "html_url": "https://github.com/vikram-iyer-example"
+  },
+  "meera-dev-example": {
+    "login": "meera-dev-example",
+    "name": "Meera Dev",
+    "email": "meera.dev@gmail.com",
+    "company": null,
+    "html_url": "https://github.com/meera-dev-example"
+  }
+}

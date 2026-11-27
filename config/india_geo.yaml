@@ -1,0 +1,361 @@
+# India geolocation rules consumed by src/enrichment/geo.py (GeoResolver).
+#
+# Matching is case-insensitive and punctuation-insensitive: every term and every input string is
+# lowercased and non-alphanumerics become single spaces, so "Hi-Tech City", "HITEC City" and
+# "hi tech city" all normalize consistently. Terms are matched on whole words, longest first.
+#
+# Per city:
+#   aliases        names / old spellings / airport codes        -> resolution_method "alias"
+#   neighborhoods  tech-hub localities                          -> resolution_method "neighborhood"
+#   state_aliases  weak signals used ONLY if nothing else hit   -> resolution_method "state_alias"
+#   state_overrides  {state: [terms]} for metro areas spanning states (Delhi NCR)
+#   pin_prefixes   leading digits of 6-digit PIN codes (longest prefix wins)
+#   lat / lng      city centroid (WGS84), used for radius queries
+#
+# Adding a city needs no code change. Loading fails loudly if one term maps to two cities.
+
+cities:
+  hyderabad:
+    display_name: Hyderabad
+    state: Telangana
+    lat: 17.3850
+    lng: 78.4867
+    aliases: [Hyderabad, HYD, Secunderabad, Cyberabad]
+    neighborhoods:
+      - HITEC City
+      - Hitech City
+      - Hi-Tech City
+      - Hitec
+      - Gachibowli
+      - Madhapur
+      - Kondapur
+      - Kukatpally
+      - Banjara Hills
+      - Jubilee Hills
+      - Begumpet
+      - Financial District
+      - Nanakramguda
+      - Raidurg
+      - Kokapet
+      - Manikonda
+      - Ameerpet
+      - Uppal
+      - Shamshabad
+      - T-Hub
+    state_aliases: [Telangana]
+    pin_prefixes: ["500", "501", "502"]
+
+  bengaluru:
+    display_name: Bengaluru
+    state: Karnataka
+    lat: 12.9716
+    lng: 77.5946
+    aliases: [Bengaluru, Bangalore, Bengalooru, Bangaluru, BLR, Bengaluru Urban]
+    neighborhoods:
+      - Koramangala
+      - HSR Layout
+      - HSR
+      - Indiranagar
+      - Indira Nagar
+      - Whitefield
+      - Bellandur
+      - Electronic City
+      - Marathahalli
+      - Sarjapur
+      - Jayanagar
+      - JP Nagar
+      - BTM Layout
+      - Hebbal
+      - Yelahanka
+      - Domlur
+      - Manyata Tech Park
+      - Bagmane Tech Park
+      - Embassy Golf Links
+      - Malleshwaram
+      - Rajajinagar
+      - Banashankari
+      - Devanahalli
+      - NSRCEL
+    state_aliases: [Karnataka]
+    pin_prefixes: ["560", "562"]
+
+  chennai:
+    display_name: Chennai
+    state: Tamil Nadu
+    lat: 13.0827
+    lng: 80.2707
+    aliases: [Chennai, Madras, MAA]
+    neighborhoods:
+      - OMR
+      - Old Mahabalipuram Road
+      - Rajiv Gandhi Salai
+      - Guindy
+      - Tidel Park
+      - Perungudi
+      - Taramani
+      - Sholinganallur
+      - Velachery
+      - Thoraipakkam
+      - Siruseri
+      - Navalur
+      - Kelambakkam
+      - Porur
+      - Ambattur
+      - Nungambakkam
+      - Anna Nagar
+      - T Nagar
+      - Adyar
+      - IITM Research Park
+      - IIT Madras Research Park
+    state_aliases: [Tamil Nadu]
+    pin_prefixes: ["600", "603"]
+
+  mumbai:
+    display_name: Mumbai
+    state: Maharashtra
+    lat: 19.0760
+    lng: 72.8777
+    aliases: [Mumbai, Bombay, BOM, Navi Mumbai, Thane, Mumbai Suburban]
+    neighborhoods:
+      - BKC
+      - Bandra Kurla Complex
+      - Bandra
+      - Powai
+      - Andheri
+      - Lower Parel
+      - Worli
+      - Malad
+      - Goregaon
+      - Vikhroli
+      - Ghatkopar
+      - Chembur
+      - Kurla
+      - Vashi
+      - Airoli
+      - Kharghar
+      - Belapur
+      - Nariman Point
+      - Churchgate
+      - Colaba
+      - Dadar
+      - Juhu
+      - Santacruz
+    state_aliases: []   # "Maharashtra" is ambiguous (Mumbai vs Pune) -> handled in `states`
+    pin_prefixes: ["400", "401", "4102"]
+
+  delhi_ncr:
+    display_name: Delhi NCR
+    state: Delhi
+    lat: 28.6139
+    lng: 77.2090
+    aliases:
+      - Delhi
+      - New Delhi
+      - Delhi NCR
+      - NCR
+      - NCT
+      - DEL
+      - Gurugram
+      - Gurgaon
+      - GGN
+      - Noida
+      - Greater Noida
+      - Ghaziabad
+      - Faridabad
+    neighborhoods:
+      - Cyber City
+      - Cyber Hub
+      - Udyog Vihar
+      - Sohna Road
+      - Golf Course Road
+      - Manesar
+      - Okhla
+      - Nehru Place
+      - Connaught Place
+      - Saket
+      - Hauz Khas
+      - Dwarka
+      - Aerocity
+    state_aliases: []
+    state_overrides:
+      Haryana: [Gurugram, Gurgaon, GGN, Faridabad, Cyber City, Cyber Hub, Udyog Vihar, Sohna Road,
+                Golf Course Road, Manesar]
+      Uttar Pradesh: [Noida, Greater Noida, Ghaziabad]
+    pin_prefixes: ["110", "121", "122", "201"]
+
+  pune:
+    display_name: Pune
+    state: Maharashtra
+    lat: 18.5204
+    lng: 73.8567
+    aliases: [Pune, Poona, PNQ, Pimpri Chinchwad, PCMC]
+    neighborhoods:
+      - Hinjewadi
+      - Hinjawadi
+      - Baner
+      - Balewadi
+      - Kharadi
+      - Magarpatta
+      - Hadapsar
+      - Viman Nagar
+      - Kalyani Nagar
+      - Koregaon Park
+      - Wakad
+      - Aundh
+      - Kothrud
+      - Yerawada
+      - Shivajinagar
+      - Talawade
+    state_aliases: []
+    pin_prefixes: ["411", "412", "4105"]
+
+  kolkata:
+    display_name: Kolkata
+    state: West Bengal
+    lat: 22.5726
+    lng: 88.3639
+    aliases: [Kolkata, Calcutta, CCU, Howrah]
+    neighborhoods:
+      - Salt Lake
+      - Salt Lake City
+      - Bidhannagar
+      - Sector V
+      - New Town
+      - Newtown
+      - Rajarhat
+      - Park Street
+    state_aliases: [West Bengal]
+    pin_prefixes: ["700", "711"]
+
+  ahmedabad:
+    display_name: Ahmedabad
+    state: Gujarat
+    lat: 23.0225
+    lng: 72.5714
+    aliases: [Ahmedabad, Amdavad, AMD, Gandhinagar, GIFT City]
+    neighborhoods:
+      - SG Highway
+      - S G Highway
+      - Prahlad Nagar
+      - Bodakdev
+      - Vastrapur
+      - Navrangpura
+      - Thaltej
+    state_aliases: []
+    pin_prefixes: ["380", "382"]
+
+# Indian states without a single dominant startup city. A match sets country=IN and `state`
+# but leaves the city unresolved so the HQ fallback (PIN / source default) can still run.
+states:
+  Maharashtra: [Maharashtra]
+  Haryana: [Haryana]
+  Uttar Pradesh: [Uttar Pradesh]
+  Gujarat: [Gujarat]
+  Kerala: [Kerala, Kochi, Cochin, Thiruvananthapuram, Trivandrum]
+  Rajasthan: [Rajasthan, Jaipur]
+  Madhya Pradesh: [Madhya Pradesh, Indore, Bhopal]
+  Odisha: [Odisha, Bhubaneswar]
+  Andhra Pradesh: [Andhra Pradesh, Visakhapatnam, Vizag, Vijayawada]
+  Punjab: [Punjab, Mohali]
+  Chandigarh: [Chandigarh]
+  Goa: [Goa]
+# (Telangana, Karnataka, Tamil Nadu, West Bengal live in their city's `state_aliases`.)
+
+# Phrases removed BEFORE city matching (e.g. IANA timezone "Asia/Kolkata" is not a Kolkata job).
+ignore_phrases:
+  - Asia/Kolkata
+  - Asia/Calcutta
+
+# Signals that a location is in India even without a city.
+india_markers: [India, Indian, Bharat, IST, GMT+5:30, UTC+5:30, GMT+05:30, UTC+05:30, Asia/Kolkata]
+
+# Remote detection.
+remote_tokens:
+  - Remote
+  - Fully Remote
+  - Work from Home
+  - WFH
+  - Anywhere
+  - Distributed
+  - Telecommute
+  - Home Based
+# Phrases that are Remote-India by themselves (no separate India marker needed).
+remote_india_phrases:
+  - Remote India
+  - India Remote
+  - Remote in India
+  - Remote within India
+  - Remote IST
+  - IST Remote
+  - Work from Home India
+  - WFH
+  - Anywhere in India
+  - Pan India
+  - PAN-India
+
+hybrid_phrases: [Hybrid, Partially Remote, Partly Remote, Remote Hybrid]
+onsite_phrases: [Onsite, On-site, On Site, In Office, In-Office, Work from Office, WFO, Office Based]
+
+# Non-India signals -> country GLOBAL (and remote_global if a remote token is also present).
+foreign_markers:
+  - USA
+  - United States
+  - US
+  - U.S.
+  - UK
+  - United Kingdom
+  - Europe
+  - EU
+  - EMEA
+  - Americas
+  - North America
+  - LATAM
+  - Canada
+  - Singapore
+  - Dubai
+  - UAE
+  - Germany
+  - Berlin
+  - London
+  - New York
+  - NYC
+  - San Francisco
+  - SF
+  - Bay Area
+  - Seattle
+  - Austin
+  - Toronto
+  - Australia
+  - Sydney
+  - Malaysia
+  - Kuala Lumpur
+  - Indonesia
+  - Jakarta
+  - Philippines
+  - Manila
+  - Vietnam
+  - Thailand
+  - Bangkok
+  - Japan
+  - Tokyo
+  - Egypt
+  - Cairo
+  - Saudi Arabia
+  - Riyadh
+  - Israel
+  - France
+  - Paris
+  - Netherlands
+  - Amsterdam
+  - Ireland
+  - Dublin
+  - Spain
+  - Poland
+  - Brazil
+  - Mexico
+  - Worldwide
+  - EST
+  - PST
+  - PT
+  - ET
+  - CET

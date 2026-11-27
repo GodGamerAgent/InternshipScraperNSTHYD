@@ -1,0 +1,65 @@
+{
+ "comments": "anonymized fixture",
+ "updatedAt": 1795600000,
+ "offset": 0,
+ "limit": 20,
+ "totalCount": 2,
+ "jobs": [
+  {
+   "title": "Research Intern",
+   "excerpt": "Research Intern at DemoResearch",
+   "companyName": "DemoResearch",
+   "companySlug": "demoresearch",
+   "companyLogo": null,
+   "employmentType": "Intern",
+   "minSalary": null,
+   "maxSalary": null,
+   "currency": null,
+   "salaryPeriod": "annual",
+   "seniority": [
+    "Entry-level"
+   ],
+   "locationRestrictions": [],
+   "timezoneRestrictions": [],
+   "categories": [
+    "Intern"
+   ],
+   "parentCategories": [],
+   "description": "<p>Research Intern: a remote role. Duration 3 months.</p>",
+   "pubDate": 1795500000,
+   "expiryDate": 1800000000,
+   "guid": "https://himalayas.app/companies/demoresearch/jobs/research-intern",
+   "applicationLink": "https://himalayas.app/companies/demoresearch/jobs/research-intern"
+  },
+  {
+   "title": "Frontend Intern",
+   "excerpt": "Frontend Intern at ExampleRemote",
+   "companyName": "ExampleRemote",
+   "companySlug": "exampleremote",
+   "companyLogo": null,
+   "employmentType": "Intern",
+   "minSalary": 15000,
+   "maxSalary": 20000,
+   "currency": "INR",
+   "salaryPeriod": "monthly",
+   "seniority": [
+    "Entry-level"
+   ],
+   "locationRestrictions": [
+    "India"
+   ],
+   "timezoneRestrictions": [
+    5.5
+   ],
+   "categories": [
+    "Intern"
+   ],
+   "parentCategories": [],
+   "description": "<p>Frontend Intern: a remote role. Duration 3 months.</p>",
+   "pubDate": 1795500000,
+   "expiryDate": 1800000000,
+   "guid": "https://himalayas.app/companies/exampleremote/jobs/frontend-intern",
+   "applicationLink": "https://himalayas.app/companies/exampleremote/jobs/frontend-intern"
+  }
+ ]
+}

@@ -1,0 +1,168 @@
+[
+ {
+  "id": "b00000000001",
+  "friendly_id": "b00000000001-marketing-intern",
+  "name": "Marketing Intern",
+  "url": "https://examplebreeze.breezy.hr/p/b00000000001-marketing-intern",
+  "published_date": "2026-11-01T10:00:00.000Z",
+  "type": {
+   "id": "internship",
+   "name": "Internship"
+  },
+  "location": {
+   "country": {
+    "name": "India",
+    "id": "IN"
+   },
+   "city": "Hyderabad",
+   "primary": true,
+   "is_remote": false,
+   "name": "Hyderabad, IN",
+   "id": "loc0001"
+  },
+  "locations": [
+   {
+    "country": {
+     "name": "India",
+     "id": "IN"
+    },
+    "city": "Hyderabad",
+    "primary": true,
+    "is_remote": false,
+    "name": "Hyderabad, IN",
+    "id": "loc0001"
+   }
+  ],
+  "department": "Growth",
+  "salary": "₹15,000 – ₹20,000 / month",
+  "company": {
+   "name": "ExampleBreeze",
+   "logo_url": null,
+   "friendly_id": "examplebreeze"
+  }
+ },
+ {
+  "id": "b00000000002",
+  "friendly_id": "b00000000002-engineering-intern",
+  "name": "Engineering Intern",
+  "url": "https://examplebreeze.breezy.hr/p/b00000000002-engineering-intern",
+  "published_date": "2026-11-01T10:00:00.000Z",
+  "type": {
+   "id": "internship",
+   "name": "Internship"
+  },
+  "location": {
+   "country": {
+    "name": "India",
+    "id": "IN"
+   },
+   "is_remote": true,
+   "primary": true,
+   "name": "India",
+   "remote_details": {}
+  },
+  "locations": [
+   {
+    "country": {
+     "name": "India",
+     "id": "IN"
+    },
+    "is_remote": true,
+    "primary": true,
+    "name": "India",
+    "remote_details": {}
+   }
+  ],
+  "department": "Growth",
+  "salary": "",
+  "company": {
+   "name": "ExampleBreeze",
+   "logo_url": null,
+   "friendly_id": "examplebreeze"
+  }
+ },
+ {
+  "id": "b00000000003",
+  "friendly_id": "b00000000003-backend-engineer",
+  "name": "Backend Engineer",
+  "url": "https://examplebreeze.breezy.hr/p/b00000000003-backend-engineer",
+  "published_date": "2026-11-01T10:00:00.000Z",
+  "type": {
+   "id": "fullTime",
+   "name": "Full-Time"
+  },
+  "location": {
+   "country": {
+    "name": "India",
+    "id": "IN"
+   },
+   "city": "Bengaluru",
+   "primary": true,
+   "is_remote": false,
+   "name": "Bengaluru, IN",
+   "id": "loc0001"
+  },
+  "locations": [
+   {
+    "country": {
+     "name": "India",
+     "id": "IN"
+    },
+    "city": "Bengaluru",
+    "primary": true,
+    "is_remote": false,
+    "name": "Bengaluru, IN",
+    "id": "loc0001"
+   }
+  ],
+  "department": "Growth",
+  "salary": "",
+  "company": {
+   "name": "ExampleBreeze",
+   "logo_url": null,
+   "friendly_id": "examplebreeze"
+  }
+ },
+ {
+  "id": "b00000000004",
+  "friendly_id": "b00000000004-design-intern",
+  "name": "Design Intern",
+  "url": "https://examplebreeze.breezy.hr/p/b00000000004-design-intern",
+  "published_date": "2026-11-01T10:00:00.000Z",
+  "type": {
+   "id": "internship",
+   "name": "Internship"
+  },
+  "location": {
+   "country": {
+    "name": "United Kingdom",
+    "id": "GB"
+   },
+   "city": "London",
+   "primary": true,
+   "is_remote": false,
+   "name": "London, GB",
+   "id": "loc0001"
+  },
+  "locations": [
+   {
+    "country": {
+     "name": "United Kingdom",
+     "id": "GB"
+    },
+    "city": "London",
+    "primary": true,
+    "is_remote": false,
+    "name": "London, GB",
+    "id": "loc0001"
+   }
+  ],
+  "department": "Growth",
+  "salary": "",
+  "company": {
+   "name": "ExampleBreeze",
+   "logo_url": null,
+   "friendly_id": "examplebreeze"
+  }
+ }
+]

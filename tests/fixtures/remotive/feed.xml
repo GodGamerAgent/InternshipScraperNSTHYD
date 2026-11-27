@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel>
+<title>Remotive (anonymized fixture)</title><link>https://remotive.com</link><description>fixture</description>
+<item><title>Data Intern</title><jobId>9001</jobId><company>ExampleData</company><location>Worldwide</location><type>internship</type>
+<guid isPermaLink="false">https://remotive.com/remote-jobs/software-dev/data-intern-9001</guid><link>https://remotive.com/remote-jobs/software-dev/data-intern-9001</link>
+<pubDate>Wed, 25 Nov 2026 11:26:35 GMT</pubDate><dc:creator>ExampleData</dc:creator><category>Software Development</category>
+<description><![CDATA[<p>Data Intern. Stipend Rs 12,000 per month for 6 months.</p>]]></description></item>
+<item><title>Marketing Intern</title><jobId>9002</jobId><company>SampleMarketing</company><location>India</location><type>internship</type>
+<guid isPermaLink="false">https://remotive.com/remote-jobs/software-dev/marketing-intern-9002</guid><link>https://remotive.com/remote-jobs/software-dev/marketing-intern-9002</link>
+<pubDate>Wed, 25 Nov 2026 11:26:35 GMT</pubDate><dc:creator>SampleMarketing</dc:creator><category>Software Development</category>
+<description><![CDATA[<p>Marketing Intern. Stipend Rs 12,000 per month for 6 months.</p>]]></description></item>
+<item><title>Design Intern</title><jobId>9003</jobId><company>DemoDesign</company><location>USA</location><type>internship</type>
+<guid isPermaLink="false">https://remotive.com/remote-jobs/software-dev/design-intern-9003</guid><link>https://remotive.com/remote-jobs/software-dev/design-intern-9003</link>
+<pubDate>Wed, 25 Nov 2026 11:26:35 GMT</pubDate><dc:creator>DemoDesign</dc:creator><category>Software Development</category>
+<description><![CDATA[<p>Design Intern. Stipend Rs 12,000 per month for 6 months.</p>]]></description></item>
+<item><title>Backend Engineer</title><jobId>9004</jobId><company>ExampleData</company><location>Worldwide</location><type>full_time</type>
+<guid isPermaLink="false">https://remotive.com/remote-jobs/software-dev/backend-engineer-9004</guid><link>https://remotive.com/remote-jobs/software-dev/backend-engineer-9004</link>
+<pubDate>Wed, 25 Nov 2026 11:26:35 GMT</pubDate><dc:creator>ExampleData</dc:creator><category>Software Development</category>
+<description><![CDATA[<p>Backend Engineer. Stipend Rs 12,000 per month for 6 months.</p>]]></description></item>
+<item><title>Operations Intern</title><jobId>9005</jobId><company>DemoOps</company><location>LATAM, Europe</location><type>internship</type>
+<guid isPermaLink="false">https://remotive.com/remote-jobs/software-dev/operations-intern-9005</guid><link>https://remotive.com/remote-jobs/software-dev/operations-intern-9005</link>
+<pubDate>Wed, 25 Nov 2026 11:26:35 GMT</pubDate><dc:creator>DemoOps</dc:creator><category>Software Development</category>
+<description><![CDATA[<p>Operations Intern. Stipend Rs 12,000 per month for 6 months.</p>]]></description></item>
+</channel></rss>

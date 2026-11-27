@@ -1,0 +1,78 @@
+{
+ "statusCode": 200,
+ "status": "success",
+ "data": [
+  {
+   "id": 4,
+   "company_name": "Dormant Pvt Ltd",
+   "tagline": "Dormant Pvt Ltd tagline",
+   "website_url": "https://dormant.example/",
+   "founders": [
+    {
+     "id": 40,
+     "name": "Old Founder",
+     "title": "CEO"
+    }
+   ],
+   "location": [
+    "India"
+   ],
+   "is_active": false,
+   "primary_sector": null,
+   "industry": null,
+   "category": null,
+   "incubated_year": "2021-2022",
+   "status": [
+    "G"
+   ]
+  },
+  {
+   "id": 5,
+   "company_name": "Linkedonly Analytics",
+   "tagline": "Linkedonly Analytics tagline",
+   "website_url": "https://www.linkedin.com/company/linkedonly/",
+   "founders": [
+    {
+     "id": 50,
+     "name": "Kiran Example",
+     "title": "CEO"
+    }
+   ],
+   "location": [
+    "India"
+   ],
+   "is_active": true,
+   "primary_sector": null,
+   "industry": null,
+   "category": null,
+   "incubated_year": "2021-2022",
+   "status": [
+    "G"
+   ]
+  },
+  {
+   "id": 6,
+   "company_name": "   ",
+   "tagline": "    tagline",
+   "website_url": "https://noname.example/",
+   "founders": [],
+   "location": null,
+   "is_active": true,
+   "primary_sector": null,
+   "industry": null,
+   "category": null,
+   "incubated_year": "2021-2022",
+   "status": [
+    "G"
+   ]
+  }
+ ],
+ "count": "5",
+ "pagination": {
+  "page": 2,
+  "limit": 3,
+  "total": 5,
+  "totalPages": 2,
+  "hasMore": false
+ }
+}

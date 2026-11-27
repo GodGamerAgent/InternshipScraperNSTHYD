@@ -1,0 +1,44 @@
+{
+  "_fixture_note": "Fictional search-API responses modelled on the documented shapes (not captured live).",
+  "type": "search",
+  "web": {
+    "type": "search",
+    "results": [
+      {
+        "title": "Result 0",
+        "url": "https://job-boards.greenhouse.io/hydstack/jobs/4001",
+        "description": "Intern role in Bengaluru"
+      },
+      {
+        "title": "Result 1",
+        "url": "https://jobs.lever.co/chaiops/1b2c3d4e-0000-4000-8000-000000000001",
+        "description": "Intern role in Bengaluru"
+      },
+      {
+        "title": "Result 2",
+        "url": "https://jobs.ashbyhq.com/nolink-labs/9f8e7d6c-0000-4000-8000-000000000002",
+        "description": "Intern role in Bengaluru"
+      },
+      {
+        "title": "Result 3",
+        "url": "https://apply.workable.com/j/ABCDEF1234",
+        "description": "Intern role in Bengaluru"
+      },
+      {
+        "title": "Result 4",
+        "url": "https://jobs.lever.co/ghostboard/apply",
+        "description": "Intern role in Bengaluru"
+      },
+      {
+        "title": "Result 5",
+        "url": "https://job-boards.greenhouse.io/groww/jobs/7001",
+        "description": "Intern role in Bengaluru"
+      },
+      {
+        "title": "Result 6",
+        "url": "https://example.com/blog/how-to-get-an-internship",
+        "description": "Intern role in Bengaluru"
+      }
+    ]
+  }
+}

@@ -1,0 +1,95 @@
+[
+  {
+    "id": "0f1e2d3c-0000-4000-8000-000000000001",
+    "text": "Intern - Product Analytics",
+    "hostedUrl": "https://jobs.lever.co/examplepay/0f1e2d3c-0000-4000-8000-000000000001",
+    "applyUrl": "https://jobs.lever.co/examplepay/0f1e2d3c-0000-4000-8000-000000000001/apply",
+    "createdAt": 1793520000000,
+    "country": "IN",
+    "workplaceType": "hybrid",
+    "categories": {
+      "commitment": "Intern",
+      "department": "Product",
+      "location": "Bangalore - WF",
+      "team": "Analytics",
+      "allLocations": [
+        "Bangalore - WF",
+        "Hyderabad"
+      ]
+    },
+    "descriptionPlain": "About ExamplePay\nThis internship runs for 6 months.",
+    "description": "<div>About ExamplePay</div>",
+    "lists": [
+      {
+        "text": "Perks",
+        "content": "<li>Pre-placement offer for top performers</li><li>Flexible hours</li>"
+      }
+    ],
+    "additionalPlain": "Equal opportunity employer.",
+    "salaryRange": {
+      "currency": "INR",
+      "interval": "per-month-salary",
+      "min": 25000,
+      "max": 30000
+    }
+  },
+  {
+    "id": "0f1e2d3c-0000-4000-8000-000000000002",
+    "text": "Backend Engineer",
+    "hostedUrl": "https://jobs.lever.co/examplepay/0f1e2d3c-0000-4000-8000-000000000002",
+    "createdAt": 1793606400000,
+    "country": "IN",
+    "workplaceType": "remote",
+    "categories": {
+      "commitment": "Intern",
+      "department": "Engineering",
+      "location": "Remote",
+      "allLocations": [
+        "Remote"
+      ]
+    },
+    "descriptionPlain": "Stipend: ₹20k - ₹30k per month. Experience: 0-6 months of experience is fine.",
+    "lists": [],
+    "additionalPlain": "",
+    "salaryRange": {
+      "currency": "INR",
+      "interval": "per-year-salary",
+      "min": 0,
+      "max": 0
+    }
+  },
+  {
+    "id": "0f1e2d3c-0000-4000-8000-000000000003",
+    "text": "Software Engineer",
+    "hostedUrl": "https://jobs.lever.co/examplepay/0f1e2d3c-0000-4000-8000-000000000003",
+    "createdAt": 1793606400000,
+    "country": "IN",
+    "workplaceType": "onsite",
+    "categories": {
+      "commitment": "Full-time Employment",
+      "location": "Bangalore - DD",
+      "allLocations": [
+        "Bangalore - DD"
+      ]
+    },
+    "descriptionPlain": "Full-time role.",
+    "lists": []
+  },
+  {
+    "id": "0f1e2d3c-0000-4000-8000-000000000004",
+    "text": "Research Intern",
+    "hostedUrl": "https://jobs.lever.co/examplepay/0f1e2d3c-0000-4000-8000-000000000004",
+    "createdAt": 1793606400000,
+    "country": "US",
+    "workplaceType": "onsite",
+    "categories": {
+      "commitment": "Intern",
+      "location": "San Francisco",
+      "allLocations": [
+        "San Francisco"
+      ]
+    },
+    "descriptionPlain": "Summer research.",
+    "lists": []
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "company": "Acme Analytics (anonymized)",
+  "domain": "acme-analytics.example",
+  "jobs": [
+    {
+      "id": 101,
+      "title": "Backend Engineering Intern",
+      "url": "https://ats.example.com/acme/jobs/101",
+      "location": "HITEC City, Hyderabad"
+    },
+    {
+      "id": 102,
+      "title": "Data Science Intern (6 months, PPO)",
+      "url": "https://ats.example.com/acme/jobs/102",
+      "location": "Remote - India"
+    },
+    {
+      "id": 103,
+      "title": "Product Design Intern",
+      "url": "https://ats.example.com/acme/jobs/103",
+      "location": "Koramangala, Bengaluru (Hybrid)"
+    }
+  ]
+}

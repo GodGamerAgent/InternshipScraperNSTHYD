@@ -1,0 +1,174 @@
+{
+ "offers": [
+  {
+   "id": 101,
+   "slug": "business-analyst-intern",
+   "title": "Business Analyst Intern",
+   "status": "published",
+   "description": "<p>6 month internship with a pre-placement offer (PPO) for strong performers.</p>",
+   "requirements": "<ul><li>Curious</li></ul>",
+   "city": "Gurugram",
+   "country": "India",
+   "country_code": "IN",
+   "location": "Gurugram, India",
+   "locations": [
+    {
+     "name": "Gurugram",
+     "city": "Gurugram",
+     "state": "Haryana",
+     "country": "India",
+     "country_code": "IN"
+    }
+   ],
+   "remote": false,
+   "hybrid": false,
+   "on_site": true,
+   "employment_type_code": "internship",
+   "careers_url": "https://examplerecruit.recruitee.com/o/business-analyst-intern",
+   "published_at": "2026-11-04 19:22:00 UTC",
+   "company_name": "ExampleRecruit",
+   "salary": {
+    "min": "20000",
+    "max": "25000",
+    "period": "month",
+    "currency": "INR"
+   }
+  },
+  {
+   "id": 102,
+   "slug": "content-intern",
+   "title": "Content Intern",
+   "status": "published",
+   "description": "<p>Join us.</p>",
+   "requirements": "<ul><li>Curious</li></ul>",
+   "city": null,
+   "country": "India",
+   "country_code": "IN",
+   "location": "India",
+   "locations": [
+    {
+     "name": "India",
+     "city": null,
+     "state": null,
+     "country": "India",
+     "country_code": "IN"
+    }
+   ],
+   "remote": true,
+   "hybrid": false,
+   "on_site": false,
+   "employment_type_code": "internship",
+   "careers_url": "https://examplerecruit.recruitee.com/o/content-intern",
+   "published_at": "2026-11-04 19:22:00 UTC",
+   "company_name": "ExampleRecruit",
+   "salary": {
+    "min": null,
+    "max": null,
+    "period": null,
+    "currency": null
+   }
+  },
+  {
+   "id": 103,
+   "slug": "brand-intern",
+   "title": "Brand Intern",
+   "status": "draft",
+   "description": "<p>Join us.</p>",
+   "requirements": "<ul><li>Curious</li></ul>",
+   "city": "Mumbai",
+   "country": "India",
+   "country_code": "IN",
+   "location": "Mumbai, India",
+   "locations": [
+    {
+     "name": "Mumbai",
+     "city": "Mumbai",
+     "state": "Maharashtra",
+     "country": "India",
+     "country_code": "IN"
+    }
+   ],
+   "remote": false,
+   "hybrid": false,
+   "on_site": true,
+   "employment_type_code": "internship",
+   "careers_url": "https://examplerecruit.recruitee.com/o/brand-intern",
+   "published_at": "2026-11-04 19:22:00 UTC",
+   "company_name": "ExampleRecruit",
+   "salary": {
+    "min": null,
+    "max": null,
+    "period": null,
+    "currency": null
+   }
+  },
+  {
+   "id": 104,
+   "slug": "account-manager",
+   "title": "Account Manager",
+   "status": "published",
+   "description": "<p>Join us.</p>",
+   "requirements": "<ul><li>Curious</li></ul>",
+   "city": "Bengaluru",
+   "country": "India",
+   "country_code": "IN",
+   "location": "Bengaluru, India",
+   "locations": [
+    {
+     "name": "Bengaluru",
+     "city": "Bengaluru",
+     "state": "Karnataka",
+     "country": "India",
+     "country_code": "IN"
+    }
+   ],
+   "remote": false,
+   "hybrid": false,
+   "on_site": true,
+   "employment_type_code": "fulltime_permanent",
+   "careers_url": "https://examplerecruit.recruitee.com/o/account-manager",
+   "published_at": "2026-11-04 19:22:00 UTC",
+   "company_name": "ExampleRecruit",
+   "salary": {
+    "min": null,
+    "max": null,
+    "period": null,
+    "currency": null
+   }
+  },
+  {
+   "id": 105,
+   "slug": "research-intern",
+   "title": "Research Intern",
+   "status": "published",
+   "description": "<p>Join us.</p>",
+   "requirements": "<ul><li>Curious</li></ul>",
+   "city": "Paris",
+   "country": "France",
+   "country_code": "FR",
+   "location": "Paris, France",
+   "locations": [
+    {
+     "name": "Paris",
+     "city": "Paris",
+     "state": "Île-de-France",
+     "country": "France",
+     "country_code": "FR"
+    }
+   ],
+   "remote": false,
+   "hybrid": false,
+   "on_site": true,
+   "employment_type_code": "internship",
+   "careers_url": "https://examplerecruit.recruitee.com/o/research-intern",
+   "published_at": "2026-11-04 19:22:00 UTC",
+   "company_name": "ExampleRecruit",
+   "salary": {
+    "min": null,
+    "max": null,
+    "period": null,
+    "currency": null
+   }
+  }
+ ]
+}

@@ -1,0 +1,69 @@
+{
+  "_fixture_note": "Anonymized HN comments; companies are fictional, seeker posts use invented details.",
+  "hits": [
+    {
+      "objectID": "1",
+      "parent_id": 90000001,
+      "story_id": 90000001,
+      "author": "user1",
+      "created_at": "2026-11-03T10:00:00Z",
+      "comment_text": "ExampleStack | Backend Engineering Intern | Bengaluru, India | ONSITE<p>We build developer tools. Stipend: ₹40,000/month, 6 months, PPO for top interns.<p>Apply: <a href=\"https:&#x2F;&#x2F;jobs.lever.co&#x2F;examplestack\">https:&#x2F;&#x2F;jobs.lever.co&#x2F;examplestack</a> or see <a href=\"https:&#x2F;&#x2F;examplestack.example&#x2F;careers\">https:&#x2F;&#x2F;examplestack.example&#x2F;careers</a>"
+    },
+    {
+      "objectID": "2",
+      "parent_id": 90000001,
+      "story_id": 90000001,
+      "author": "user2",
+      "created_at": "2026-11-03T10:00:00Z",
+      "comment_text": "Location: Bengaluru, India (IST)<p>Remote: Yes<p>Willing to relocate: No<p>Technologies: Python, React<p>Résumé: <a href=\"https:&#x2F;&#x2F;example.invalid&#x2F;cv\">link</a><p>Email: seeker@example.invalid"
+    },
+    {
+      "objectID": "3",
+      "parent_id": 90000001,
+      "story_id": 90000001,
+      "author": "user3",
+      "created_at": "2026-11-03T10:00:00Z",
+      "comment_text": "SEEKING WORK | Junior developer | Hyderabad | Remote<p>I am a fresher looking for roles."
+    },
+    {
+      "objectID": "4",
+      "parent_id": 90000001,
+      "story_id": 90000001,
+      "author": "user4",
+      "created_at": "2026-11-03T10:00:00Z",
+      "comment_text": "BigCo Example | Junior Software Engineer | Remote (US only) | $120k<p><a href=\"https:&#x2F;&#x2F;bigco.example\">bigco.example</a>"
+    },
+    {
+      "objectID": "5",
+      "parent_id": 90000001,
+      "story_id": 90000001,
+      "author": "user5",
+      "created_at": "2026-11-03T10:00:00Z",
+      "comment_text": "GlobalDocs | New Grad Engineer | REMOTE (Worldwide) | Full-time<p>Async-first team. <a href=\"https:&#x2F;&#x2F;globaldocs.example&#x2F;jobs\">Apply</a>"
+    },
+    {
+      "objectID": "6",
+      "parent_id": 90000001,
+      "story_id": 90000001,
+      "author": "user6",
+      "created_at": "2026-11-03T10:00:00Z",
+      "comment_text": "IndiaPay Example | Senior Staff Engineer | Hyderabad | ONSITE<p>10+ years."
+    },
+    {
+      "objectID": "7",
+      "parent_id": 1,
+      "story_id": 90000001,
+      "author": "user7",
+      "created_at": "2026-11-03T10:00:00Z",
+      "comment_text": "Reply to ExampleStack: are you open to Pune too?"
+    },
+    {
+      "objectID": "8",
+      "parent_id": 90000001,
+      "story_id": 90000001,
+      "author": "user8",
+      "created_at": "2026-11-03T10:00:00Z",
+      "comment_text": "Chai Robotics | Robotics Intern | Remote (IST) | Internship<p>Unpaid internship for 3 months. <a href=\"https:&#x2F;&#x2F;www.linkedin.com&#x2F;company&#x2F;chai-robotics\">LinkedIn</a>"
+    }
+  ]
+}

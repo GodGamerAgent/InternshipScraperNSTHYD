@@ -1,0 +1,121 @@
+# Daily scrape -> enrich -> export, with the SQLite DB and HTTP (ETag) cache carried between runs.
+#
+# Secrets / variables (Settings -> Secrets and variables -> Actions):
+#   secrets.SCRAPER_GITHUB_TOKEN  optional PAT (public read) for a higher GitHub API limit; falls back
+#                                 to the built-in GITHUB_TOKEN (custom secret names can't start GITHUB_).
+#   secrets.FIRECRAWL_API_KEY     optional; empty = Firecrawl disabled (JS-only pages are reported).
+#   vars.SCRAPER_USER_AGENT       recommended: a UA with a contact URL for site owners.
+#   vars.ENRICH_LIMIT             startups enriched per run (default 25).
+#   vars.EXPORT_CONTACTS          'true' to also export contacts. Off by default: artifacts of a
+#                                 PUBLIC repository are downloadable by anyone with read access.
+name: Daily scrape
+
+on:
+  schedule:
+    - cron: "20 1 * * *"   # 01:20 UTC = 06:50 IST (off the top of the hour to avoid queueing)
+  workflow_dispatch:
+    inputs:
+      sources:
+        description: "Comma-separated collectors (blank = all)"
+        required: false
+        default: ""
+      export_contacts:
+        description: "Also export contacts.csv (keep the artifact private)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: daily-scrape
+  cancel-in-progress: false   # never interrupt a run that is writing the database
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      SCRAPER_DB_PATH: data/scraper.db
+      SCRAPER_HTTP_CACHE_DIR: data/http_cache
+      SCRAPER_LOG_FORMAT: json
+      SCRAPER_LOG_LEVEL: INFO
+      SCRAPER_USER_AGENT: ${{ vars.SCRAPER_USER_AGENT || format('india-internship-scraper/0.1 (+https://github.com/{0})', github.repository) }}
+      GITHUB_TOKEN: ${{ secrets.SCRAPER_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
+      FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+          cache-dependency-glob: uv.lock
+
+      - name: Install dependencies (locked)
+        run: uv sync --frozen
+
+      - name: Lint and test (offline)
+        run: |
+          uv run ruff check .
+          uv run ruff format --check .
+          uv run pytest -q
+
+      - name: Restore database + HTTP cache
+        uses: actions/cache/restore@v4
+        with:
+          path: data
+          key: scraper-data-${{ github.run_id }}
+          restore-keys: scraper-data-
+
+      - name: Plan (dry run)
+        env:
+          SOURCES: ${{ inputs.sources }}
+        run: uv run scraper scrape --dry-run ${SOURCES:+--sources "$SOURCES"}
+
+      - name: Scrape
+        env:
+          SOURCES: ${{ inputs.sources }}
+        run: uv run scraper scrape ${SOURCES:+--sources "$SOURCES"}
+
+      - name: Enrich
+        env:
+          ENRICH_LIMIT: ${{ vars.ENRICH_LIMIT || '25' }}
+        run: uv run scraper enrich --limit "$ENRICH_LIMIT"
+
+      - name: Export
+        if: ${{ !cancelled() }}
+        env:
+          EXPORT_CONTACTS: ${{ inputs.export_contacts || vars.EXPORT_CONTACTS == 'true' }}
+        run: |
+          uv run scraper export --what opportunities \
+            --cities hyderabad,bengaluru,chennai,mumbai,delhi_ncr,pune --include-remote \
+            --format csv --out exports/internships_india.csv
+          uv run scraper export --what opportunities --status all --format json \
+            --out exports/opportunities_all.json
+          uv run scraper export --what startups --format csv --out exports/startups.csv
+          uv run scraper export --what startups --min-hidden-score 60 --format csv \
+            --out exports/hidden_opportunities.csv
+          uv run scraper export --what leads --format csv --out exports/leads.csv
+          if [ "$EXPORT_CONTACTS" = "true" ]; then
+            uv run scraper export --what contacts --min-hidden-score 60 --format csv \
+              --out exports/contacts.csv
+          fi
+          uv run scraper stats
+
+      - name: Upload exports
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: exports-${{ github.run_number }}
+          path: exports/
+          retention-days: 14
+          if-no-files-found: warn
+
+      - name: Save database + HTTP cache
+        if: ${{ !cancelled() }}
+        uses: actions/cache/save@v4
+        with:
+          path: data
+          key: scraper-data-${{ github.run_id }}

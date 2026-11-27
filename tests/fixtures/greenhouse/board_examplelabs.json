@@ -1,0 +1,131 @@
+{
+  "_fixture_note": "Anonymized fixture modelled on the live API shape (2026-11). Company and people are fictional.",
+  "jobs": [
+    {
+      "absolute_url": "https://job-boards.greenhouse.io/examplelabs/jobs/1001",
+      "id": 1001,
+      "internal_job_id": 5001,
+      "title": "Software Engineering Intern",
+      "location": {
+        "name": "Onsite in Bangalore"
+      },
+      "departments": [
+        {
+          "id": 1,
+          "name": "Engineering",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "offices": [
+        {
+          "id": 11,
+          "name": "Bengaluru",
+          "location": null,
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "updated_at": "2026-11-20T09:00:00-05:00",
+      "first_published": "2026-11-01T10:00:00+05:30",
+      "company_name": "ExampleLabs",
+      "language": "en",
+      "metadata": [],
+      "content": "&lt;h3&gt;&lt;strong&gt;About the role&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;Build APIs with our platform team.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Stipend: ₹40,000 per month&lt;/li&gt;&lt;li&gt;Duration: 6 months&lt;/li&gt;&lt;li&gt;PPO based on performance&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;No prior experience required.&lt;/p&gt;"
+    },
+    {
+      "absolute_url": "https://job-boards.greenhouse.io/examplelabs/jobs/1002",
+      "id": 1002,
+      "title": "Senior Backend Engineer",
+      "location": {
+        "name": "Bengaluru"
+      },
+      "departments": [
+        {
+          "id": 1,
+          "name": "Engineering"
+        }
+      ],
+      "offices": [],
+      "updated_at": "2026-11-20T09:00:00-05:00",
+      "content": "&lt;p&gt;5+ years of experience. Mentor our interns.&lt;/p&gt;"
+    },
+    {
+      "absolute_url": "https://job-boards.greenhouse.io/examplelabs/jobs/1003",
+      "id": 1003,
+      "title": "Assistant Manager - Internal Audit",
+      "location": {
+        "name": "Mumbai"
+      },
+      "departments": [
+        {
+          "id": 2,
+          "name": "Finance"
+        }
+      ],
+      "offices": [],
+      "updated_at": "2026-11-20T09:00:00-05:00",
+      "content": ""
+    },
+    {
+      "absolute_url": "https://job-boards.greenhouse.io/examplelabs/jobs/1004",
+      "id": 1004,
+      "title": "Data Analyst Intern",
+      "location": {
+        "name": "Kuala Lumpur, Malaysia"
+      },
+      "departments": [
+        {
+          "id": 3,
+          "name": "Analytics"
+        }
+      ],
+      "offices": [],
+      "updated_at": "2026-11-20T09:00:00-05:00",
+      "content": "&lt;p&gt;Stipend: MYR 2,000&lt;/p&gt;"
+    },
+    {
+      "absolute_url": "https://job-boards.greenhouse.io/examplelabs/jobs/1005",
+      "id": 1005,
+      "title": "Product Design",
+      "location": {
+        "name": "India"
+      },
+      "departments": [
+        {
+          "id": 4,
+          "name": "Internship"
+        }
+      ],
+      "offices": [],
+      "updated_at": "2026-11-18T09:00:00Z",
+      "first_published": null,
+      "content": "&lt;p&gt;This is an unpaid internship for 3 months.&lt;/p&gt;"
+    },
+    {
+      "absolute_url": "https://job-boards.greenhouse.io/examplelabs/jobs/1006",
+      "id": 1006,
+      "title": "Growth Intern",
+      "location": {
+        "name": "Remote"
+      },
+      "departments": [],
+      "offices": [],
+      "updated_at": "2026-11-19T09:00:00Z",
+      "content": "&lt;p&gt;Competitive stipend. Work from anywhere.&lt;/p&gt;"
+    },
+    {
+      "id": 1007,
+      "title": "Broken Intern Posting (missing absolute_url)",
+      "location": {
+        "name": "Pune"
+      },
+      "departments": [],
+      "updated_at": "2026-11-19T09:00:00Z",
+      "content": ""
+    }
+  ],
+  "meta": {
+    "total": 7
+  }
+}

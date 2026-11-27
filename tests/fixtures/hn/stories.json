@@ -1,0 +1,17 @@
+{
+  "_fixture_note": "Anonymized HN Algolia search response (2026-11).",
+  "hits": [
+    {
+      "objectID": "90000002",
+      "title": "Ask HN: Who wants to be hired? (November 2026)",
+      "author": "whoishiring",
+      "created_at": "2026-11-02T16:00:00Z"
+    },
+    {
+      "objectID": "90000001",
+      "title": "Ask HN: Who is hiring? (November 2026)",
+      "author": "whoishiring",
+      "created_at": "2026-11-02T16:00:00Z"
+    }
+  ]
+}

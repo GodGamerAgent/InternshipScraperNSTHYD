@@ -1,0 +1,11 @@
+{
+  "_fixture_note": "Anonymized GitHub REST /orgs/{org} response.",
+  "login": "examplestack-oss",
+  "id": 1,
+  "name": "ExampleStack",
+  "blog": "https://examplestack.example",
+  "email": "oss@examplestack.example",
+  "location": "Bengaluru, India",
+  "public_repos": 12,
+  "twitter_username": null
+}

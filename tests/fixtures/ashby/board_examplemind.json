@@ -1,0 +1,120 @@
+{
+  "apiVersion": "1",
+  "_fixture_note": "Anonymized fixture modelled on the live API shape (2026-11). Company and people are fictional.",
+  "jobs": [
+    {
+      "id": "a1",
+      "title": "Marketing internship (brand & communication)",
+      "department": "Marketing",
+      "team": "Marketing",
+      "employmentType": "FullTime",
+      "location": "Bengaluru",
+      "secondaryLocations": [
+        {
+          "location": "Mumbai",
+          "address": {
+            "postalAddress": {
+              "addressLocality": "Mumbai",
+              "addressRegion": "Maharashtra",
+              "addressCountry": "India"
+            }
+          }
+        }
+      ],
+      "publishedAt": "2026-10-23T10:47:51.171+00:00",
+      "isListed": true,
+      "isRemote": false,
+      "workplaceType": "OnSite",
+      "address": {
+        "postalAddress": {
+          "addressLocality": "Bengaluru",
+          "addressRegion": "Karnataka",
+          "addressCountry": "India"
+        }
+      },
+      "jobUrl": "https://jobs.ashbyhq.com/examplemind/a1",
+      "applyUrl": "https://jobs.ashbyhq.com/examplemind/a1/application",
+      "descriptionPlain": "About ExampleMind\nHelp us tell our story.",
+      "descriptionHtml": "<p>About ExampleMind</p>",
+      "compensation": {
+        "compensationTierSummary": "₹30K – ₹40K per month",
+        "summaryComponents": [
+          {
+            "compensationType": "Salary",
+            "interval": "1 MONTH",
+            "currencyCode": "INR",
+            "minValue": 30000,
+            "maxValue": 40000
+          }
+        ]
+      }
+    },
+    {
+      "id": "a2",
+      "title": "ML Research Intern",
+      "employmentType": "Intern",
+      "location": "India",
+      "secondaryLocations": [],
+      "publishedAt": "2026-11-02T08:00:00.000+00:00",
+      "isListed": true,
+      "isRemote": true,
+      "workplaceType": "Remote",
+      "address": {
+        "postalAddress": {
+          "addressCountry": "India"
+        }
+      },
+      "jobUrl": "https://jobs.ashbyhq.com/examplemind/a2",
+      "descriptionPlain": null,
+      "descriptionHtml": "<p>Duration: 12 weeks.</p><p>Please note: no PPO for this cohort.</p>",
+      "compensation": {
+        "compensationTierSummary": null,
+        "summaryComponents": []
+      }
+    },
+    {
+      "id": "a3",
+      "title": "Unlisted Intern",
+      "employmentType": "Intern",
+      "location": "Bengaluru",
+      "isListed": false,
+      "jobUrl": "https://jobs.ashbyhq.com/examplemind/a3"
+    },
+    {
+      "id": "a4",
+      "title": "Founding Engineer",
+      "employmentType": "FullTime",
+      "location": "Bengaluru",
+      "isListed": true,
+      "workplaceType": "OnSite",
+      "jobUrl": "https://jobs.ashbyhq.com/examplemind/a4",
+      "descriptionPlain": "Build the core."
+    },
+    {
+      "id": "a5",
+      "title": "Design Intern",
+      "employmentType": "Intern",
+      "location": "San Francisco",
+      "isListed": true,
+      "workplaceType": "OnSite",
+      "address": {
+        "postalAddress": {
+          "addressCountry": "United States"
+        }
+      },
+      "jobUrl": "https://jobs.ashbyhq.com/examplemind/a5",
+      "descriptionPlain": "SF studio.",
+      "compensation": {
+        "summaryComponents": [
+          {
+            "compensationType": "Salary",
+            "interval": "1 MONTH",
+            "currencyCode": "USD",
+            "minValue": 8000,
+            "maxValue": 9000
+          }
+        ]
+      }
+    }
+  ]
+}

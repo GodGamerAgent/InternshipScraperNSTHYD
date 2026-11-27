@@ -1,0 +1,373 @@
+# Source seeds and matching rules. Consumed by collectors (Phase 3–4) — never hardcode these in Python.
+# Regexes are Python `re` syntax, matched case-insensitively. Use single quotes so backslashes survive.
+
+internship:
+  # A posting is an internship if its TITLE matches an include pattern, or its ATS employment-type /
+  # commitment / department field says intern(ship) — and the title matches no exclude pattern.
+  # Descriptions are deliberately NOT used: full-time JDs often say "mentor our interns".
+  include_patterns:
+    - '\bintern\b'
+    - '\binternship\b'
+    - '\bsummer intern'
+    - '\bwinter intern'
+    - '\b6[- ]?months?\b'
+    - '\bPPO\b'
+    - '\bpre[- ]placement offer\b'
+    - '\bapprentice(ship)?\b'
+    - '\btrainee\b'
+    - '\bco-?op\b'
+    - '\bstudent\b'
+    - '\bfellow(ship)?\b'
+    - '\bcampus\b'
+    - '\bfresher\b'
+  # Seniority / contract markers. "Manager" and "Lead" are NOT excluded on purpose:
+  # "Product Manager Intern" and "Lead Generation Intern" are real internship titles.
+  exclude_title_patterns:
+    - '\bsenior\b'
+    - '\bsr\.?\b'
+    - '\bstaff\b'
+    - '\bprincipal\b'
+    - '\bdirector\b'
+    - '\bhead of\b'
+    - '\bvp\b'
+    - '\bcontract(ual|or)?\b'
+  # Employment-type values (Lever commitment, Ashby employmentType, Workable employment_type,
+  # Greenhouse department names) that mark a posting as an internship.
+  employment_type_patterns:
+    - '\bintern(ship)?s?\b'
+    - '\btrainee\b'
+    - '\bapprentice(ship)?\b'
+
+# ---------------------------------------------------------------- Tier 1: public ATS JSON
+# Each company: {name, slug, domain, hq_city?, verified_on?, notes?}. `slug` is the board token /
+# company / jobs-page name in the endpoint; `hq_city` must be a slug from india_geo.yaml (or omitted).
+# Only add seeds you verified against the live public API (record the date in `verified_on`).
+ats:
+  greenhouse:
+    endpoint: 'https://boards-api.greenhouse.io/v1/boards/{slug}/jobs?content=true'
+    companies:
+      - {name: Groww, slug: groww, domain: groww.in, hq_city: bengaluru, verified_on: 2026-11-26}
+      - {name: Razorpay, slug: razorpaysoftwareprivatelimited, domain: razorpay.com, hq_city: bengaluru, verified_on: 2026-11-26}
+      - {name: InMobi, slug: inmobi, domain: inmobi.com, hq_city: bengaluru, verified_on: 2026-11-26}
+      - {name: Druva, slug: druva, domain: druva.com, hq_city: pune, verified_on: 2026-11-26,
+         notes: "US HQ; large Pune engineering centre"}
+      - {name: HackerRank, slug: hackerrank, domain: hackerrank.com, hq_city: bengaluru, verified_on: 2026-11-26,
+         notes: "US HQ; Bengaluru engineering; posts SDE/AI interns"}
+      - {name: HighRadius, slug: highradius, domain: highradius.com, hq_city: hyderabad, verified_on: 2026-11-26,
+         notes: "US HQ; large Hyderabad centre (63 jobs, Hyderabad listings on probe)"}
+      - {name: Enterpret, slug: enterpret, domain: enterpret.com, hq_city: bengaluru, verified_on: 2026-11-26,
+         notes: "active onsite Bangalore SWE internship with PPO"}
+      - {name: FourKites, slug: fourkites, domain: fourkites.com, hq_city: chennai, verified_on: 2026-11-26,
+         notes: "Chennai R&D centre; active INR 30,000/mo internships"}
+      - {name: Observe.AI, slug: observeai, domain: observe.ai, hq_city: bengaluru, verified_on: 2026-11-26,
+         notes: "verified live on Greenhouse"}
+      - {name: Rubrik, slug: rubrik, domain: rubrik.com, hq_city: bengaluru, verified_on: 2026-11-26,
+         notes: "Bengaluru engineering centre; active intern roles"}
+      - {name: Turing, slug: turing, domain: turing.com, hq_city: null, verified_on: 2026-11-26,
+         notes: "hires across Bengaluru and Hyderabad"}
+      - {name: Agoda, slug: agoda, domain: agoda.com, hq_city: delhi_ncr, verified_on: 2026-11-26,
+         notes: "Gurgaon office; active 6-month SWE internship"}
+      - {name: Episode Six, slug: episodesixlinkedin, domain: episodesix.com, hq_city: chennai, verified_on: 2026-11-26,
+         notes: "Chennai engineering listings on Greenhouse"}
+  lever:
+    endpoint: 'https://api.lever.co/v0/postings/{slug}?mode=json'
+    companies:
+      - {name: CRED, slug: cred, domain: cred.club, hq_city: bengaluru, verified_on: 2026-11-26}
+      - {name: Meesho, slug: meesho, domain: meesho.com, hq_city: bengaluru, verified_on: 2026-11-26}
+      - {name: Zeta, slug: zeta, domain: zeta.tech, hq_city: bengaluru, verified_on: 2026-11-26}
+      - {name: Paytm, slug: paytm, domain: paytm.com, hq_city: delhi_ncr, verified_on: 2026-11-26,
+         notes: "Noida/Delhi NCR HQ; verified live on Lever"}
+  ashby:
+    endpoint: 'https://api.ashbyhq.com/posting-api/job-board/{slug}?includeCompensation=true'
+    companies:
+      - {name: Sarvam AI, slug: sarvam, domain: sarvam.ai, hq_city: bengaluru, verified_on: 2026-11-26,
+         notes: "posts marketing / research internships"}
+      - {name: SpotDraft, slug: spotdraft, domain: spotdraft.com, hq_city: bengaluru, verified_on: 2026-11-26}
+      - {name: Composio, slug: composio, domain: composio.dev, hq_city: bengaluru, verified_on: 2026-11-26,
+         notes: "mixed SF/Bengaluru board"}
+      - {name: Plane, slug: plane, domain: plane.so, hq_city: null, verified_on: 2026-11-26,
+         notes: "Hyderabad listings seen; HQ city not confirmed"}
+      - {name: Atlan, slug: atlan, domain: atlan.com, hq_city: null, verified_on: 2026-11-26,
+         notes: "distributed; India roles listed as 'India'"}
+      - {name: AiPrise, slug: aiprise, domain: aiprise.com, hq_city: bengaluru, verified_on: 2026-11-26,
+         notes: "YC-backed HSR Layout Bengaluru startup"}
+      - {name: Certa, slug: certa, domain: certa.ai, hq_city: null, verified_on: 2026-11-26,
+         notes: "active paid 6-month Frontend Engineer internship in India"}
+      - {name: Airbound, slug: airbound, domain: airbound.co, hq_city: bengaluru, verified_on: 2026-11-26,
+         notes: "Bengaluru deep-tech/drone startup with multiple intern roles"}
+      - {name: Human Archive, slug: humanarchive, domain: humanarchive.ai, hq_city: null, verified_on: 2026-11-26,
+         notes: "active India Founder's Office internships"}
+      - {name: Kantiv, slug: kantiv, domain: kantiv.com, hq_city: null, verified_on: 2026-11-26,
+         notes: "active remote India internships"}
+      - {name: Freehand, slug: freehand, domain: freehand.ai, hq_city: chennai, verified_on: 2026-11-26,
+         notes: "Chennai HQ AI startup"}
+      - {name: Build AI, slug: build-ai, domain: build.ai, hq_city: null, verified_on: 2026-11-26,
+         notes: "active India engineering roles"}
+      - {name: Lyzr AI, slug: lyzr, domain: lyzr.ai, hq_city: null, verified_on: 2026-11-26,
+         notes: "verified live on Ashby"}
+  workable:
+    endpoint: 'https://apply.workable.com/api/v1/widget/accounts/{slug}?details=true'  # details => description
+    companies:
+      - {name: Kissflow, slug: kissflow, domain: kissflow.com, hq_city: chennai, verified_on: 2026-11-26,
+         notes: "account exists; 0 open jobs on 2026-11-26"}
+      - {name: Facilio, slug: facilio, domain: facilio.com, hq_city: chennai, verified_on: 2026-11-26,
+         notes: "account exists; 0 open jobs on 2026-11-26"}
+      - {name: Weekday AI, slug: weekday-1, domain: weekday.works, hq_city: bengaluru, verified_on: 2026-11-26,
+         notes: "YC W21 startup; active remote India internships"}
+      - {name: Lokal App, slug: lokal-app, domain: getlokalapp.com, hq_city: bengaluru, verified_on: 2026-11-26,
+         notes: "active React Native & marketing internships"}
+      - {name: Mercari India, slug: mercari-india, domain: mercari.com, hq_city: bengaluru, verified_on: 2026-11-26,
+         notes: "Bengaluru hybrid engineering centre"}
+      - {name: WATI, slug: wati-dot-i-o, domain: wati.io, hq_city: null, verified_on: 2026-11-26,
+         notes: "active SaaS internships"}
+      - {name: Origin, slug: origin-10x, domain: origin.build, hq_city: bengaluru, verified_on: 2026-11-26,
+         notes: "robotics startup; active engineering internships"}
+
+  # ---- More public JSON job-board APIs (ADR 009): fetched with robots.txt RESPECTED (unlike Tier 1).
+  # Seeds verified live 2026-11-26: Indian postings present AND the company domain is evidenced by the
+  # board itself (Breezy/Recruitee portal links) or by the company's site linking the board (Rippling).
+  # SmartRecruiters is NOT here: api.smartrecruiters.com/robots.txt disallows all agents but LinkedInBot.
+  rippling:
+    endpoint: 'https://api.rippling.com/platform/api/ats/v1/board/{slug}/jobs'
+    companies:
+      - {name: Rippling, slug: rippling, domain: rippling.com, verified_on: 2026-11-26,
+         notes: "~90 Bangalore openings; job JSON links rippling.com"}
+      - {name: Azira, slug: azira-careers-page, domain: azira.com, verified_on: 2026-11-26,
+         notes: "Bengaluru data roles; azira.com/careers links this board"}
+  breezyhr:
+    endpoint: 'https://{slug}.breezy.hr/json'
+    companies:
+      - {name: 75F, slug: 75f-apac, domain: 75f.io, verified_on: 2026-11-26,
+         notes: "Bengaluru / Mumbai openings; portal links 75f.io"}
+      - {name: Anovia, slug: anovia, domain: anovia.com, verified_on: 2026-11-26,
+         notes: "India-wide + Bengaluru openings"}
+      - {name: sa.global, slug: sa-global, domain: saglobal.com, verified_on: 2026-11-26,
+         notes: "Bengaluru Dynamics 365 openings"}
+      - {name: NationsBenefits, slug: nationsbenefits, domain: nationsbenefits.com, verified_on: 2026-11-26,
+         notes: "Hyderabad engineering openings"}
+      - {name: SkySpecs, slug: skyspecs, domain: skyspecs.com, verified_on: 2026-11-26,
+         notes: "Hyderabad finance / R&D openings"}
+  recruitee:
+    endpoint: 'https://{slug}.recruitee.com/api/offers/'
+    companies:
+      - {name: Lenskart, slug: lenskartcareers, domain: lenskart.com, verified_on: 2026-11-26,
+         notes: "70+ India openings incl. interns; portal links lenskart.com"}
+      - {name: TransPerfect, slug: transperfect, domain: transperfect.com, verified_on: 2026-11-26,
+         notes: "Pune / Bangalore openings"}
+      - {name: MGID, slug: mgid, domain: mgid.com, verified_on: 2026-11-26,
+         notes: "Mumbai / Bangalore openings"}
+      - {name: Framestore, slug: framestore, domain: framestore.com, verified_on: 2026-11-26,
+         notes: "Mumbai studio openings"}
+
+  # ---- India-popular ATS portals (ADR 008) — HTML pages, robots.txt respected.
+  # Zoho Recruit: `slug` is the FULL portal host (`acme.zohorecruit.in` / `.com`; the data centre differs
+  # per tenant). Jobs are embedded as JSON in the server-rendered /jobs/Careers page. Each seed below was
+  # verified live on 2026-11-26: Indian postings present AND the portal links to the company's own domain.
+  # hq_city omitted (postings carry their own city). Keka is NOT here: its job data path is robots-disallowed.
+  zohorecruit:
+    endpoint: 'https://{slug}/jobs/Careers'
+    companies:
+      - {name: Accio Robotics, slug: acciorobotics.zohorecruit.com, domain: acciorobotics.com,
+         verified_on: 2026-11-26, notes: "5 Bengaluru robotics/firmware openings"}
+      - {name: Crossbow Labs, slug: crossbowlabs.zohorecruit.com, domain: crossbowsec.com,
+         verified_on: 2026-11-26, notes: "security engineering; Bengaluru"}
+      - {name: DrinkPrime, slug: drinkprime.zohorecruit.in, domain: drinkprime.in,
+         verified_on: 2026-11-26, notes: "Bengaluru product & tech openings"}
+      - {name: Kratikal, slug: kratikal.zohorecruit.com, domain: kratikal.com,
+         verified_on: 2026-11-26, notes: "cybersecurity; Noida / Pune / Mumbai openings"}
+      - {name: Rareminds, slug: rareminds.zohorecruit.in, domain: rareminds.in,
+         verified_on: 2026-11-26, notes: "Bengaluru data / DevSecOps openings"}
+
+# Hostname patterns that reveal an ATS embed on a careers page (Phase 4 ats_discovery).
+ats_embed_hosts:
+  greenhouse: [boards.greenhouse.io, job-boards.greenhouse.io, boards-api.greenhouse.io]
+  lever: [jobs.lever.co, api.lever.co]
+  ashby: [jobs.ashbyhq.com, api.ashbyhq.com]
+  workable: [apply.workable.com]
+  rippling: [ats.rippling.com, api.rippling.com]
+  breezyhr: [breezy.hr]
+  recruitee: [recruitee.com]
+  smartrecruiters: [jobs.smartrecruiters.com, careers.smartrecruiters.com]   # detection only (ADR 009)
+  keka: [keka.com]
+  zohorecruit: [zohorecruit.in, zohorecruit.com]
+  freshteam: [freshteam.com]
+  darwinbox: [darwinbox.in]
+
+# ---------------------------------------------------------------- Tier 2: feeds & directories
+# Funding news (RSS). Titles like "GIVA raises Rs 90 Cr from BlackSoil" become StartupLeads.
+funding_feeds:
+  - name: inc42
+    url: 'https://inc42.com/buzz/feed/'       # funding headlines ("XEBO.ai Bags $10.5 Mn …")
+  - name: inc42
+    url: 'https://inc42.com/startups/feed/'   # startup stories; funding titles are rare here
+  - name: entrackr
+    url: 'https://entrackr.com/rss'   # /feed returns 404 (verified 2026-11-26)
+
+# Incubator directories. kind=tablepress: server-rendered TablePress tables (Lab 32);
+# kind=webflow: JS-rendered Webflow list (needs FIRECRAWL_API_KEY, otherwise reported as an issue).
+# default_city applies only when a row has no Headquarters value.
+incubators:
+  - name: thub_lab32
+    kind: tablepress
+    url: 'https://programs.t-hub.co/lab-32-directory/'
+    default_city: hyderabad
+  - name: thub
+    kind: webflow
+    url: 'https://www.t-hub.co/startups-directory'
+    default_city: hyderabad
+  # v0.2 (ADR 008). default_city applies only when a row has no more specific location.
+  - name: iitm_incubation
+    kind: iitm_api                # public JSON API of the portfolio page (robots respected); 425 rows
+    url: 'https://incubation.iitm.ac.in/api/portfolios/active'
+    default_city: chennai
+    page_size: 100
+    max_pages: 10
+  - name: nsrcel
+    kind: nsrcel_popup            # Elementor "*-startup-popup" blocks (robots respected)
+    url: 'https://nsrcel.org/portfolio/'
+    default_city: bengaluru
+
+# Remote job feeds (ADR 010): keep only internships open to India (India / IST / worldwide remote).
+remote_feeds:
+  himalayas:
+    # Documented keyless JSON API (himalayas.app/api), robots.txt respected. Page 1 of each query only:
+    # `?page=` is disallowed by robots.txt. API terms: link applicationLink unchanged, credit Himalayas.
+    search_url: 'https://himalayas.app/jobs/api/search'
+    queries:
+      - {country: IN, employment_type: Intern, sort: recent}
+      - {worldwide: 'true', employment_type: Intern, sort: recent}
+  remotive:
+    # RSS (robots-allowed). Remotive's JSON API (/api/*) is robots-disallowed -> not used.
+    feed_url: 'https://remotive.com/remote-jobs/feed'
+  india_country_names: [India]
+  india_utc_offset: 5.5
+  worldwide_keywords: [worldwide, anywhere, global, 'any timezone', 'all timezones']
+  keep_worldwide: true
+
+# Indian student portals (ADR 011). The owner chose to collect from portals with unauthenticated public
+# listings, even though their Terms prohibit automated access (see the ADR). robots.txt is respected,
+# with polite per-host pacing and no login, CAPTCHA or firewall bypass.
+# Non-targets: Unstop (CloudFront 403 for our UA), Cuvette (cuvette.tech does not resolve).
+# Target keys are india_geo.yaml city slugs or `remote`. `--cities` narrows the city keys; remote is always kept.
+student_portals:
+  internshala:
+    base_url: 'https://internshala.com'
+    max_pages: 2                    # 50 cards per page; /page-N/ allowed by robots.txt
+    targets:
+      bengaluru: /internships/internship-in-bangalore/
+      hyderabad: /internships/internship-in-hyderabad/
+      chennai: /internships/internship-in-chennai/
+      remote: /internships/work-from-home-internships/
+  cutshort:
+    base_url: 'https://cutshort.io'
+    targets:                        # listing pages taken from cutshort.io/sitemap_listings.xml; page 1 each
+      bengaluru: /jobs/startup-jobs-in-bangalore-bengaluru
+      hyderabad: /jobs/startup-jobs-in-hyderabad
+      chennai: /jobs/startup-jobs-in-chennai
+      remote: /jobs/remote-jobs
+  instahyre:
+    landing_url: 'https://www.instahyre.com/internship-jobs/'   # embeds the first 20 + a `next` API link
+    max_pages: 5
+
+# Y Combinator India directory (ADR 008): server-rendered pages, robots.txt allows them.
+# api.ycombinator.com is robots-disallowed and must not be used. Hiring = listed on hiring_url.
+yc_india:
+  listing_url: 'https://www.ycombinator.com/companies/location/india'
+  hiring_url: 'https://www.ycombinator.com/companies/location/india/hiring'
+  max_pages: 10
+  statuses: [Active, Public]
+
+hacker_news:
+  search_url: 'https://hn.algolia.com/api/v1/search_by_date'
+  comments_url: 'https://hn.algolia.com/api/v1/search'
+  who_is_hiring_author: whoishiring
+  story_title_pattern: '^Ask HN: Who is hiring\?'
+  max_comments: 1000
+  # Keep a posting when the geo resolver places it in India / Remote-India, or when it is a
+  # remote role open worldwide (one of remote_global_keywords).
+  remote_global_keywords: [worldwide, global, anywhere, 'any timezone', 'all timezones']
+  role_keywords: ['\bintern(ship)?s?\b', '\bjunior\b', '\bnew[- ]grads?\b', '\bfreshers?\b', '\bentry[- ]level\b', '\bgraduate\b']
+  # Job-SEEKER posts sometimes land in the hiring thread. They describe individuals and must be
+  # skipped (never stored).
+  seeker_patterns:
+    - 'willing to relocate'
+    - '^\s*seeking\b'
+    - '\b(r[ée]sum[ée]|cv)\s*:'
+    - '^\s*location\s*:.*\n?.*\bremote\s*:'
+
+# Hosts that are never a startup's own website (job boards, registries, social, link shorteners).
+# Used when picking a company domain from HN posts and incubator directory rows.
+non_company_hosts: [news.ycombinator.com, ycombinator.com, linkedin.com, github.com, twitter.com, x.com,
+                    facebook.com, instagram.com, youtube.com, medium.com, linktr.ee, wa.me, google.com,
+                    play.google.com, apps.apple.com, jobs.lever.co, boards.greenhouse.io,
+                    job-boards.greenhouse.io, jobs.ashbyhq.com, apply.workable.com, wellfound.com,
+                    angel.co, notion.site, docs.google.com, forms.gle, calendly.com, bit.ly,
+                    zaubacorp.com, tofler.in, crunchbase.com, tracxn.com, t-hub.co]
+
+# ---------------------------------------------------------------- Hidden-opportunity discovery
+site:
+  # Paths probed on a startup's own domain (robots.txt respected).
+  careers_paths: [/, /careers, /jobs, /join, /join-us, /work-with-us, /about, /contact, /team]
+  max_pages: 9
+  # A 200 page with less visible text than this AND an SPA mount point is treated as JS-only.
+  spa_min_text_chars: 400
+
+cold_pitch_phrases:
+  - general application
+  - drop your resume
+  - drop us your resume
+  - send your resume
+  - send us your cv
+  - don't see a role
+  - dont see a role
+  - don't see the right role
+  - always looking for
+  - always hiring
+  - write to us
+  - reach out to us
+
+contacts:
+  # Role mailboxes considered public recruiting contacts (Pass 1).
+  hiring_mailbox_prefixes: [founders, founder, careers, jobs, hiring, talent, hello, hr, people,
+                            recruitment, recruiting, team, internships, contact, info]
+  # Company-domain mailboxes that are public but not for recruiting -> never stored.
+  excluded_mailbox_prefixes: [press, media, pr, support, help, sales, billing, invoices, accounts,
+                              legal, privacy, abuse, security, noreply, no-reply, donotreply, webmaster]
+  # Public profile hosts we may record as URLs (we never log in or scrape these sites).
+  profile_hosts: [github.com, linkedin.com, x.com, twitter.com]
+  # Pass 3 work-email patterns from public founder names (only kept if the domain has MX records).
+  pattern_templates: ['{first}', '{first}.{last}']
+  # Pass 2: at most this many public GitHub org members are looked up (API budget).
+  max_github_members: 5
+
+# ---------------------------------------------------------------- Automatic ATS seed discovery (ADR 007)
+# Automated runs only READ this file; every discovered board is stored in SQLite (`startups`).
+ats_probe:
+  # During `enrich`: if a startup has no ATS and its careers pages embed none, guess board slugs from
+  # its domain/name and verify them on the public ATS JSON APIs (anti-collision checked).
+  enabled: true
+  providers: [greenhouse, lever, ashby, workable, rippling, breezyhr, recruitee]
+  min_slug_length: 4          # shorter candidates collide with unrelated companies' boards
+  max_candidates: 3
+  strip_prefixes: [get, try, use, join, hey, go, the, my]
+  stopwords: [jobs, careers, career, hiring, india, tech, labs, team, work, home, apply, startup,
+              company, group, global, solutions, technologies, software, systems, digital, online, app]
+  # Words ignored when comparing an ATS board's display name with the startup's name.
+  # Matching is exact after removing these, so "Atlan Travel Group" never matches "Atlan".
+  name_noise: [careers, career, jobs, hiring, team, inc, pvt, ltd, private, limited, llp,
+               technologies, technology, labs, india, software, solutions, services, systems]
+
+ats_search:
+  # `scraper discover`: find public ATS boards through an official search API (Firecrawl /search or
+  # Brave Search API; never scraping a search engine's HTML), verify each on the ATS JSON API.
+  max_results_per_query: 10
+  default_cities: [bengaluru, hyderabad, chennai]
+  include_india_query: true   # also run each template with "India"
+  queries:
+    greenhouse: ['site:job-boards.greenhouse.io intern {city}', 'site:boards.greenhouse.io intern {city}']
+    lever: ['site:jobs.lever.co intern {city}']
+    ashby: ['site:jobs.ashbyhq.com intern {city}']
+    workable: ['site:apply.workable.com intern {city}']
+    rippling: ['site:ats.rippling.com intern {city}']
+    breezyhr: ['site:breezy.hr intern {city}']
+    recruitee: ['site:recruitee.com intern {city}']

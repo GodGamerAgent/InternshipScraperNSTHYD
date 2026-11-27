@@ -1,0 +1,83 @@
+{
+ "statusCode": 200,
+ "status": "success",
+ "data": [
+  {
+   "id": 1,
+   "company_name": "Examplesense Technologies Private Limited",
+   "tagline": "Examplesense Technologies Private Limited tagline",
+   "website_url": "https://www.examplesense.example/",
+   "founders": [
+    {
+     "id": 10,
+     "name": "Asha Fictional",
+     "title": "CEO"
+    }
+   ],
+   "location": [
+    "India"
+   ],
+   "is_active": true,
+   "primary_sector": "Deep Tech",
+   "industry": null,
+   "category": null,
+   "incubated_year": "2021-2022",
+   "status": [
+    "G"
+   ]
+  },
+  {
+   "id": 2,
+   "company_name": "Sampleflow Labs",
+   "tagline": "Sampleflow Labs tagline",
+   "website_url": "http://sampleflow.example",
+   "founders": [
+    {
+     "id": 20,
+     "name": "Ravi Placeholder",
+     "title": "CEO"
+    },
+    {
+     "id": 21,
+     "name": "Meera Sample",
+     "title": "CEO"
+    }
+   ],
+   "location": null,
+   "is_active": true,
+   "primary_sector": null,
+   "industry": null,
+   "category": null,
+   "incubated_year": "2021-2022",
+   "status": [
+    "G"
+   ]
+  },
+  {
+   "id": 3,
+   "company_name": "Elsewhere Robotics",
+   "tagline": "Elsewhere Robotics tagline",
+   "website_url": "https://elsewhere.example/",
+   "founders": [],
+   "location": [
+    "Bengaluru, India"
+   ],
+   "is_active": true,
+   "primary_sector": null,
+   "industry": null,
+   "category": null,
+   "incubated_year": "2021-2022",
+   "status": [
+    "G"
+   ]
+  }
+ ],
+ "count": "5",
+ "pagination": {
+  "page": 1,
+  "limit": 3,
+  "total": 5,
+  "totalPages": 2,
+  "hasMore": true
+ }
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "name": "cli",
+    "full_name": "examplestack-oss/cli",
+    "fork": false,
+    "archived": false,
+    "pushed_at": "2026-11-25T10:00:00Z",
+    "language": "Go",
+    "stargazers_count": 5,
+    "open_issues_count": 2
+  },
+  {
+    "name": "sdk-python",
+    "full_name": "examplestack-oss/sdk-python",
+    "fork": false,
+    "archived": false,
+    "pushed_at": "2026-11-20T10:00:00Z",
+    "language": "Python",
+    "stargazers_count": 5,
+    "open_issues_count": 2
+  },
+  {
+    "name": "web",
+    "full_name": "examplestack-oss/web",
+    "fork": false,
+    "archived": false,
+    "pushed_at": "2026-11-05T10:00:00Z",
+    "language": "TypeScript",
+    "stargazers_count": 5,
+    "open_issues_count": 2
+  },
+  {
+    "name": "docs",
+    "full_name": "examplestack-oss/docs",
+    "fork": false,
+    "archived": false,
+    "pushed_at": "2026-11-01T10:00:00Z",
+    "language": "MDX",
+    "stargazers_count": 5,
+    "open_issues_count": 2
+  },
+  {
+    "name": "forked-lib",
+    "full_name": "examplestack-oss/forked-lib",
+    "fork": true,
+    "archived": false,
+    "pushed_at": "2026-11-26T09:00:00Z",
+    "language": "C",
+    "stargazers_count": 5,
+    "open_issues_count": 2
+  },
+  {
+    "name": "old-api",
+    "full_name": "examplestack-oss/old-api",
+    "fork": false,
+    "archived": true,
+    "pushed_at": "2026-11-24T00:00:00Z",
+    "language": "Java",
+    "stargazers_count": 5,
+    "open_issues_count": 2
+  },
+  {
+    "name": "legacy",
+    "full_name": "examplestack-oss/legacy",
+    "fork": false,
+    "archived": false,
+    "pushed_at": "2025-01-10T10:00:00Z",
+    "language": "Ruby",
+    "stargazers_count": 5,
+    "open_issues_count": 2
+  }
+]

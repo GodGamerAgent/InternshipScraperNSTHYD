@@ -1,0 +1,45 @@
+# Hidden-opportunity rubric (0–100). Consumed by src/enrichment/scorer.py (Phase 4).
+# Points of all signals must sum to `max_score` (enforced by tests).
+
+max_score: 100
+
+signals:
+  recent_funding:
+    points: 30
+    description: Raised Pre-Seed or Seed in India within the window.
+    max_age_days: 60
+    stages: [pre_seed, seed]
+
+  target_location:
+    points: 20
+    description: HQ/role in a user-selected target city, or the role supports remote_india.
+
+  github_activity:
+    points: 20
+    description: Active GitHub org.
+    min_active_repos: 3
+    recent_commit_days: 14
+    active_repo_days: 30   # a repo pushed within this window counts as active
+
+  cold_pitch:
+    points: 15
+    description: Careers page invites cold pitches or lists a direct founder/recruiting email.
+
+  team_or_stack:
+    points: 15
+    description: Small team or tech stack matches target skills (either condition awards full points).
+    team_size_min: 2
+    team_size_max: 35
+    target_skills: [python, typescript, javascript, react, node, go, rust, java, kotlin, flutter,
+                    machine learning, llm, pytorch, data engineering, devops]
+
+# Labels used in exports / CLI stats.
+thresholds:
+  high: 60
+  medium: 35
+
+# Contact confidence by discovery method (implementation.md §3E).
+contact_confidence:
+  direct_public: 0.95
+  github_public: 0.85
+  pattern_mx_verified: 0.50

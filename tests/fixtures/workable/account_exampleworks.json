@@ -1,0 +1,79 @@
+{
+  "name": "ExampleWorks",
+  "description": null,
+  "_fixture_note": "Anonymized fixture modelled on the live API shape (2026-11). Company and people are fictional.",
+  "jobs": [
+    {
+      "title": "Frontend Developer Intern",
+      "shortcode": "EX1001",
+      "code": null,
+      "employment_type": "Internship",
+      "telecommuting": false,
+      "department": "Engineering",
+      "url": "https://apply.workable.com/j/EX1001",
+      "shortlink": "https://apply.workable.com/j/EX1001",
+      "application_url": "https://apply.workable.com/j/EX1001/apply",
+      "published_on": "2026-11-10",
+      "created_at": "2026-11-05",
+      "country": "India",
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "education": null,
+      "experience": "Internship",
+      "locations": [
+        {
+          "country": "India",
+          "countryCode": "IN",
+          "city": "Chennai",
+          "region": "Tamil Nadu",
+          "hidden": false
+        }
+      ],
+      "description": "<p>Work on our React dashboard.</p><p><strong>Stipend:</strong> 15k - 20k/month</p><p>Duration: 3 months</p>"
+    },
+    {
+      "title": "QA Trainee",
+      "shortcode": "EX1002",
+      "employment_type": "Full-time",
+      "telecommuting": true,
+      "url": "https://apply.workable.com/j/EX1002",
+      "shortlink": "https://apply.workable.com/j/EX1002",
+      "published_on": "2026-11-12",
+      "country": "India",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "locations": [
+        {
+          "country": "India",
+          "countryCode": "IN",
+          "city": "Pune",
+          "region": "Maharashtra",
+          "hidden": true
+        }
+      ],
+      "description": "<p>Paid internship.</p>"
+    },
+    {
+      "title": "Account Executive",
+      "shortcode": "EX1003",
+      "employment_type": "Full-time",
+      "telecommuting": false,
+      "url": "https://apply.workable.com/j/EX1003",
+      "shortlink": "https://apply.workable.com/j/EX1003",
+      "published_on": "2026-11-12",
+      "country": "India",
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "locations": [
+        {
+          "country": "India",
+          "countryCode": "IN",
+          "city": "Chennai",
+          "region": "Tamil Nadu",
+          "hidden": false
+        }
+      ],
+      "description": "<p>Sales.</p>"
+    }
+  ]
+}

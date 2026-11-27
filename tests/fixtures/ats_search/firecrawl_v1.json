@@ -1,0 +1,21 @@
+{
+  "_fixture_note": "Fictional search-API responses modelled on the documented shapes (not captured live).",
+  "success": true,
+  "data": [
+    {
+      "url": "https://job-boards.greenhouse.io/hydstack/jobs/4001",
+      "title": "Result 0",
+      "description": "Intern"
+    },
+    {
+      "url": "https://jobs.lever.co/chaiops/1b2c3d4e-0000-4000-8000-000000000001",
+      "title": "Result 1",
+      "description": "Intern"
+    },
+    {
+      "url": "https://jobs.ashbyhq.com/nolink-labs/9f8e7d6c-0000-4000-8000-000000000002",
+      "title": "Result 2",
+      "description": "Intern"
+    }
+  ]
+}

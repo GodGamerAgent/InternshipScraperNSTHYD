@@ -1,0 +1,12 @@
+{
+  "company": "Broken Board (anonymized)",
+  "domain": "broken-board.example",
+  "jobs": [
+    {
+      "id": 201,
+      "title": "",
+      "url": "not-a-url",
+      "location": "Chennai"
+    }
+  ]
+}

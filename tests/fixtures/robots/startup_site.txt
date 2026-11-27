@@ -1,0 +1,24 @@
+﻿# Anonymized robots.txt modelled on a typical Indian SaaS startup site (WordPress + careers SPA).
+# Note the UTF-8 BOM above, CRLF-free lines, comments, mixed-case keys and one misspelling.
+
+User-agent: *
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+Disallow: /*?replytocom=
+Disallow: /*.pdf$
+Disallow: /cart
+dissallow: /checkout          # misspelled on purpose (RFC 9309 lets crawlers accept it)
+Crawl-delay: 5
+
+User-agent: GPTBot
+User-agent: CCBot
+Disallow: /
+
+# A group for us specifically: careers is fine, the internal admin board is not.
+USER-AGENT: india-internship-scraper
+Disallow: /careers/internal
+Allow: /careers
+Disallow: /team/private
+
+Sitemap: https://www.examplelabs.in/sitemap_index.xml
+Sitemap: https://www.examplelabs.in/careers-sitemap.xml

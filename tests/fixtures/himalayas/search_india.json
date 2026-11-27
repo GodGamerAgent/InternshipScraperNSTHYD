@@ -1,0 +1,185 @@
+{
+ "comments": "anonymized fixture",
+ "updatedAt": 1795600000,
+ "offset": 0,
+ "limit": 20,
+ "totalCount": 6,
+ "jobs": [
+  {
+   "title": "Frontend Intern",
+   "excerpt": "Frontend Intern at ExampleRemote",
+   "companyName": "ExampleRemote",
+   "companySlug": "exampleremote",
+   "companyLogo": null,
+   "employmentType": "Intern",
+   "minSalary": 15000,
+   "maxSalary": 20000,
+   "currency": "INR",
+   "salaryPeriod": "monthly",
+   "seniority": [
+    "Entry-level"
+   ],
+   "locationRestrictions": [
+    "India"
+   ],
+   "timezoneRestrictions": [
+    5.5
+   ],
+   "categories": [
+    "Intern"
+   ],
+   "parentCategories": [],
+   "description": "<p>Frontend Intern: a remote role. Duration 3 months.</p>",
+   "pubDate": 1795500000,
+   "expiryDate": 1800000000,
+   "guid": "https://himalayas.app/companies/exampleremote/jobs/frontend-intern",
+   "applicationLink": "https://himalayas.app/companies/exampleremote/jobs/frontend-intern"
+  },
+  {
+   "title": "Growth Intern",
+   "excerpt": "Growth Intern at SampleGrowth",
+   "companyName": "SampleGrowth",
+   "companySlug": "samplegrowth",
+   "companyLogo": null,
+   "employmentType": "Intern",
+   "minSalary": null,
+   "maxSalary": null,
+   "currency": null,
+   "salaryPeriod": "annual",
+   "seniority": [
+    "Entry-level"
+   ],
+   "locationRestrictions": [],
+   "timezoneRestrictions": [
+    5.5
+   ],
+   "categories": [
+    "Intern"
+   ],
+   "parentCategories": [],
+   "description": "<p>Growth Intern: a remote role. Duration 3 months.</p>",
+   "pubDate": 1795500000,
+   "expiryDate": 1800000000,
+   "guid": "https://himalayas.app/companies/samplegrowth/jobs/growth-intern",
+   "applicationLink": "https://himalayas.app/companies/samplegrowth/jobs/growth-intern"
+  },
+  {
+   "title": "Policy Intern",
+   "excerpt": "Policy Intern at ExampleRemote",
+   "companyName": "ExampleRemote",
+   "companySlug": "exampleremote",
+   "companyLogo": null,
+   "employmentType": "Intern",
+   "minSalary": null,
+   "maxSalary": null,
+   "currency": null,
+   "salaryPeriod": "annual",
+   "seniority": [
+    "Entry-level"
+   ],
+   "locationRestrictions": [
+    "United States"
+   ],
+   "timezoneRestrictions": [
+    -8,
+    -5
+   ],
+   "categories": [
+    "Intern"
+   ],
+   "parentCategories": [],
+   "description": "<p>Policy Intern: a remote role. Duration 3 months.</p>",
+   "pubDate": 1795500000,
+   "expiryDate": 1800000000,
+   "guid": "https://himalayas.app/companies/exampleremote/jobs/us-intern",
+   "applicationLink": "https://himalayas.app/companies/exampleremote/jobs/us-intern"
+  },
+  {
+   "title": "Senior Backend Engineer",
+   "excerpt": "Senior Backend Engineer at ExampleRemote",
+   "companyName": "ExampleRemote",
+   "companySlug": "exampleremote",
+   "companyLogo": null,
+   "employmentType": "Full Time",
+   "minSalary": null,
+   "maxSalary": null,
+   "currency": null,
+   "salaryPeriod": "annual",
+   "seniority": [
+    "Entry-level"
+   ],
+   "locationRestrictions": [
+    "India"
+   ],
+   "timezoneRestrictions": [
+    5.5
+   ],
+   "categories": [
+    "Intern"
+   ],
+   "parentCategories": [],
+   "description": "<p>Senior Backend Engineer: a remote role. Duration 3 months.</p>",
+   "pubDate": 1795500000,
+   "expiryDate": 1800000000,
+   "guid": "https://himalayas.app/companies/exampleremote/jobs/senior-engineer",
+   "applicationLink": "https://himalayas.app/companies/exampleremote/jobs/senior-engineer"
+  },
+  {
+   "title": "Sales Intern",
+   "excerpt": "Sales Intern at ExampleRemote",
+   "companyName": "ExampleRemote",
+   "companySlug": "exampleremote",
+   "companyLogo": null,
+   "employmentType": "Intern",
+   "minSalary": null,
+   "maxSalary": null,
+   "currency": null,
+   "salaryPeriod": "annual",
+   "seniority": [
+    "Entry-level"
+   ],
+   "locationRestrictions": [],
+   "timezoneRestrictions": [
+    8,
+    9
+   ],
+   "categories": [
+    "Intern"
+   ],
+   "parentCategories": [],
+   "description": "<p>Sales Intern: a remote role. Duration 3 months.</p>",
+   "pubDate": 1795500000,
+   "expiryDate": 1800000000,
+   "guid": "https://himalayas.app/companies/exampleremote/jobs/apac-intern",
+   "applicationLink": "https://himalayas.app/companies/exampleremote/jobs/apac-intern"
+  },
+  {
+   "title": "Broken Intern",
+   "excerpt": "Broken Intern at ExampleRemote",
+   "companyName": "ExampleRemote",
+   "companySlug": "exampleremote",
+   "companyLogo": null,
+   "employmentType": "Intern",
+   "minSalary": null,
+   "maxSalary": null,
+   "currency": null,
+   "salaryPeriod": "annual",
+   "seniority": [
+    "Entry-level"
+   ],
+   "locationRestrictions": [
+    "India"
+   ],
+   "timezoneRestrictions": [
+    5.5
+   ],
+   "categories": [
+    "Intern"
+   ],
+   "parentCategories": [],
+   "description": "<p>Broken Intern: a remote role. Duration 3 months.</p>",
+   "pubDate": 1795500000,
+   "expiryDate": 1800000000
+  }
+ ]
+}

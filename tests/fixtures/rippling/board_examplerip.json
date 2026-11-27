@@ -1,0 +1,66 @@
+[
+ {
+  "uuid": "00000000-0000-4000-8000-000000000001",
+  "name": "Software Engineering Intern",
+  "department": {
+   "id": "Engineering",
+   "label": "Engineering"
+  },
+  "workLocation": {
+   "label": "Bengaluru, India",
+   "id": "Bengaluru, India"
+  },
+  "url": "https://ats.rippling.com/examplerip/jobs/00000000-0000-4000-8000-000000000001"
+ },
+ {
+  "uuid": "00000000-0000-4000-8000-000000000002",
+  "name": "Product Design Intern",
+  "department": {
+   "id": "Engineering",
+   "label": "Engineering"
+  },
+  "workLocation": {
+   "label": "Remote, India",
+   "id": "Remote, India"
+  },
+  "url": "https://ats.rippling.com/examplerip/jobs/00000000-0000-4000-8000-000000000002"
+ },
+ {
+  "uuid": "00000000-0000-4000-8000-000000000003",
+  "name": "Data Science Intern",
+  "department": {
+   "id": "Engineering",
+   "label": "Engineering"
+  },
+  "workLocation": {
+   "label": "Remote (United States)",
+   "id": "Remote (United States)"
+  },
+  "url": "https://ats.rippling.com/examplerip/jobs/00000000-0000-4000-8000-000000000003"
+ },
+ {
+  "uuid": "00000000-0000-4000-8000-000000000004",
+  "name": "Senior Platform Engineer",
+  "department": {
+   "id": "Engineering",
+   "label": "Engineering"
+  },
+  "workLocation": {
+   "label": "Bengaluru, India",
+   "id": "Bengaluru, India"
+  },
+  "url": "https://ats.rippling.com/examplerip/jobs/00000000-0000-4000-8000-000000000004"
+ },
+ {
+  "uuid": "00000000-0000-4000-8000-000000000005",
+  "name": "Broken Intern Posting",
+  "department": {
+   "id": "Engineering",
+   "label": "Engineering"
+  },
+  "workLocation": {
+   "label": "Pune, India",
+   "id": "Pune, India"
+  }
+ }
+]

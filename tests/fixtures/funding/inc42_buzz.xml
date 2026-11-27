@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Anonymized fixture modelled on the live feed (2026-11-26). Companies and investors are fictional. -->
+<rss version="2.0"><channel><title>Inc42 Buzz</title><link>https://news.example/</link><description>fixture</description>
+<item><title>XampleAI Bags $10.5 Mn To Expand Its Customer Experience Platform</title><link>https://inc42.com/buzz/xampleai-bags-10-5-mn/</link><pubDate>Thu, 26 Nov 2026 06:00:00 +0000</pubDate><category><![CDATA[News]]></category><description><![CDATA[Noida-based XampleAI raised the Series A round.]]></description></item>
+<item><title>What A Chip Comeback Means For India’s AI Players</title><link>https://inc42.com/buzz/chip-comeback/</link><pubDate>Thu, 26 Nov 2026 05:00:00 +0000</pubDate><category><![CDATA[News]]></category><description><![CDATA[Analysis.]]></description></item>
+</channel></rss>

@@ -1,0 +1,18 @@
+{
+  "_fixture_note": "Fictional search-API responses modelled on the documented shapes (not captured live).",
+  "success": true,
+  "data": {
+    "web": [
+      {
+        "url": "https://apply.workable.com/j/ABCDEF1234",
+        "title": "Result 0",
+        "description": "Intern"
+      },
+      {
+        "url": "https://jobs.lever.co/ghostboard/apply",
+        "title": "Result 1",
+        "description": "Intern"
+      }
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+ "meta": {
+  "limit": 2,
+  "offset": 2,
+  "total_count": 3,
+  "next": null,
+  "previous": "/api/v1/job_search?offset=0"
+ },
+ "objects": [
+  {
+   "id": 703,
+   "title": "Product Intern",
+   "candidate_title": "Product Intern (Internship)",
+   "employer": {
+    "id": 7030,
+    "company_name": "DemoProduct"
+   },
+   "keywords": [
+    "Python",
+    "SQL"
+   ],
+   "locations": "Mumbai",
+   "public_url": "https://www.instahyre.com/job-703-product-intern-internship-at-demoproduct/",
+   "resource_uri": "/api/v1/job_search/703"
+  },
+  {
+   "id": 704,
+   "title": "Sales Intern",
+   "candidate_title": "Sales Intern (Internship)",
+   "employer": {
+    "id": 7040,
+    "company_name": "AbroadSales"
+   },
+   "keywords": [
+    "Python",
+    "SQL"
+   ],
+   "locations": "Dubai, United Arab Emirates",
+   "public_url": "https://www.instahyre.com/job-704-sales-intern-internship-at-abroadsales/",
+   "resource_uri": "/api/v1/job_search/704"
+  }
+ ]
+}
